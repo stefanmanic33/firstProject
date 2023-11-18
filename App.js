@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import AppText from "./app/components/AppText";
@@ -8,11 +8,35 @@ import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessageScreen from "./app/components/MessageScreen";
+import Icon from "./app/components/Icon";
+import Screen from "./app/components/Screen";
+import ListItem from "./app/components/ListItem";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import React, { useState } from "react";
+import AccountScreen from "./app/components/AccountScreen";
+import ListiningScreen from "./app/components/ListiningScreen";
 
 export default function App() {
+  const [count, setCount] = useState(0);
   return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      {/* <Screen>
+        <ListItem
+          title="My Title"
+          subTitle="My Subtitle"
+          IconComponent={<Icon name="email" />}
+        />
+        <ListItem
+          title="My Title"
+          subTitle="My Subtitle"
+          IconComponent={<Icon name="email" />}
+        />
+      </Screen> */}
+      <ListiningScreen />
+    </GestureHandlerRootView>
+
     // <MessageScreen />
-    <ViewImageScreen />
+    // <ViewImageScreen />
     // <ListingDetailsScreen />
     // <View
     //   style={{
