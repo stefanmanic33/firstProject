@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FlatList, StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import ListItem from "./ListItem";
+import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
 import ListItemSeparator from "../components/ListItemSeparator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
